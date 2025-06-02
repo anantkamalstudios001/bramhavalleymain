@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { MainRoutingModule } from './main-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { PlacementsComponent } from './placements/placements.component';
+import { IqacComponent } from './iqac/iqac.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  
+  
+  
+    PlacementsComponent,
+               IqacComponent
+  ],
   imports: [
-    CommonModule,
-    MainRoutingModule
+    MainRoutingModule,
+    
   ]
 })
 export class MainModule { }

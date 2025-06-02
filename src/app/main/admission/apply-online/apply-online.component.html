@@ -1,0 +1,132 @@
+<ng-container #container></ng-container>
+
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section" data-aos="fade-up">
+            <div class="container position-relative py-5">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb bg-transparent text-white p-0">
+                        <li class="breadcrumb-item"><a href="index.html"
+                                class="text-white text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Apply Online</li>
+                    </ol>
+                </nav>
+                <h1 class="display-3 fw-bold text-white" data-aos="zoom-in" data-aos-delay="100">Apply Online</h1>
+                <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="200">Start your journey with Brahma
+                    Valley University by submitting your application for 2025–2026.</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="#apply-section" class="btn btn-light btn-lg shadow-sm px-5 py-2" data-aos="fade-up"
+                        data-aos-delay="400">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply Online Form Section -->
+        <section class="py-5" id="apply-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="h1 fw-bold" style="font-family: 'Poppins', sans-serif;" data-aos="fade-up">Online
+                        Application Form</h2>
+                    <hr class="border-3 border-primary mx-auto mb-4" style="width: 80px; border-color: #083da0;"
+                        data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-muted" style="font-family: 'Poppins', sans-serif;" data-aos="fade-up"
+                        data-aos-delay="200">Apply to Brahma Valley institutions (MBA, Engineering, Pharmacy, and more)
+                        by completing the form below.</p>
+                </div>
+
+                <form class="row g-4 needs-validation shadow-lg p-4 rounded-3 bg-white" id="applicationForm"
+                    method="POST" action="/submit-application" novalidate data-aos="fade-up" data-aos-delay="300">
+                    <!-- Full Name -->
+                    <div class="col-12 col-md-6">
+                        <label for="sname" class="form-label fw-semibold"
+                            style="color: #083da0; font-family: 'Poppins', sans-serif;">Full Name* <small
+                                class="text-muted">(As per last marksheet)</small></label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" id="sname" name="sname"
+                                placeholder="Enter Your Name" pattern="[A-Za-z\s]+" required>
+                            <div class="invalid-feedback">Please enter a valid name (alphabetic characters and spaces
+                                only).</div>
+                        </div>
+                    </div>
+
+                    <!-- Aadhar No (Indian) -->
+                    <div class="col-12 col-md-6" id="aadharDiv">
+                        <label for="saadhar" class="form-label fw-semibold"
+                            style="color: #083da0; font-family: 'Poppins', sans-serif;">Aadhar No*</label>
+                        <input type="text" class="form-control" id="saadhar" name="saadhar"
+                            placeholder="Enter 12-digit Aadhar No" pattern="\d{12}" maxlength="12" required>
+                        <div class="invalid-feedback">Please enter a valid 12-digit Aadhar number.</div>
+                        <small class="text-danger d-none" id="aadharError"></small>
+                    </div>
+
+                    <!-- Citizenship No (International) -->
+                    <div class="col-12 col-md-6 d-none" id="citizenshipDiv">
+                        <label for="citizenship" class="form-label fw-semibold"
+                            style="color: #083da0; font-family: 'Poppins', sans-serif;">Citizenship No*</label>
+                        <input type="text" class="form-control" id="citizenship" name="citizenship"
+                            placeholder="Enter Citizenship No" required>
+                        <div class="invalid-feedback">Please enter a valid citizenship number.</div>
+                        <small class="text-danger d-none" id="citizenshipError"></small>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-12 col-md-6">
+                        <label for="email" class="form-label fw-semibold"
+                            style="color: #083da0; font-family: 'Poppins', sans-serif;">Email*</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                            placeholder="Enter Email Address" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="col-12 col-md-6">
+                        <label for="smobile" class="form-label fw-semibold"
+                            style="color: #083da0; font-family: 'Poppins', sans-serif;">Mobile*</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="smobile" name="smobile"
+                                placeholder="Enter 10-digit Mobile No" pattern="\d{10}" maxlength="10" required>
+                            <button type="button" class="btn btn-primary" id="genOTP" onclick="gennew()">Send
+                                OTP</button>
+                            <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+                        </div>
+                        <small class="text-danger d-none" id="mobileError"></small>
+                    </div>
+
+                    <!-- OTP -->
+                    <div class="col-12 col-md-6">
+                        <label for="otp" class="form-label fw-semibold"
+                            style="color: #083da0; font-family: 'Poppins', sans-serif;">OTP*</label>
+                        <input type="text" class="form-control" id="otp" name="otp" placeholder="Enter 4-digit OTP"
+                            pattern="\d{4}" maxlength="4" required onkeyup="verifyotp(this)">
+                        <div class="invalid-feedback">Please enter a valid 4-digit OTP.</div>
+                        <small class="text-danger d-none" id="otpError"></small>
+                    </div>
+
+                    <!-- Hidden OTP Check -->
+                    <input type="hidden" name="checkotp" id="checkotp" value="N">
+
+                    <!-- Submit Button -->
+                    <div class="col-12 text-center mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill">Save & Next</button>
+                    </div>
+                </form>
+
+                <!-- Download Application Form -->
+                <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+                    <a href="assets/pdf/application-form-2025-26.pdf"
+                        class="btn btn-outline-primary btn-lg rounded-pill" download>Download Application Form (PDF) <i
+                            class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+    <ng-container #footercontainer></ng-container>

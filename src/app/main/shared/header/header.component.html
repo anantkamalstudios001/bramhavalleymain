@@ -1,0 +1,198 @@
+  <!-- Header -->
+  <header>
+    <div class="container-fluid py-1" style="background-color: #083da0;">
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center text-white gap-2 px-3">
+        <ul class="list-inline mb-0 d-flex flex-wrap gap-2 text-white">
+          <li class="list-inline-item"><a class="text-white text-decoration-none small" href="ebrochures.html">Download
+              E-Brochures</a></li>
+          <li class="list-inline-item"><a class="text-white text-decoration-none small"
+              href="student_corner.html">Student Corner</a></li>
+          <!-- <li class="list-inline-item"><a class="text-white text-decoration-none small" href="blogs.html"
+                            target="_blank">Blogs</a></li> -->
+          <li class="list-inline-item"><a class="text-white text-decoration-none small" href="alumni.html">Alumni</a>
+          </li>
+          <li class="list-inline-item"><a class="text-white text-decoration-none small" href="consultancy.html"
+              target="_blank">Consultancy Cell</a></li>
+        </ul>
+        <ul class="list-inline mb-0 d-flex align-items-center gap-2">
+          <li><a class="text-white text-decoration-none small" href="#"><span>Get Connected</span></a></li>
+
+          <li>
+            <a class="text-white" href="#" target="_blank" aria-label="WhatsApp">
+              <img src="assets/img/icons/whatsapp.png" alt="WhatsApp" width="20" height="20">
+            </a>
+          </li>
+          <li>
+            <a class="text-white" href="#" target="_blank" aria-label="360">
+              <img src="assets/img/icons/360.png" alt="360" width="20" height="20">
+              <!-- <span class="ms-1">360</span> -->
+            </a>
+          </li>
+          <li>
+            <a class="text-white" href="#" target="_blank">
+              <img src="assets/img/icons/fb.png" alt="Facebook" width="20" height="20">
+            </a>
+          </li>
+          <!-- <li>
+                        <a class="text-white" href="#" target="_blank" aria-label="Twitter">
+                            <img src="assets/img/icons/" alt="Twitter" width="20" height="20">
+                        </a>
+                    </li> -->
+          <li>
+            <a class="text-white" href="https://in.linkedin.com/" target="_blank">
+              <img src="assets/img/icons/linkedin.png" alt="LinkedIn" width="20" height="20">
+            </a>
+          </li>
+          <li>
+            <a class="text-white" href="https://www.instagram.com/" target="_blank">
+              <img src="assets/img/icons/ig.png" alt="Instagram" width="20" height="20">
+            </a>
+          </li>
+          <li>
+            <a class="text-white" href="https://www.youtube.com/" target="_blank">
+              <img src="assets/img/icons/yt.png" alt="YouTube" width="20" height="20">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light pt-4 header fixed-top" id="header">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <a class="navbar-brand mt-2" href="#">
+          <img src="assets/img/logo.png" alt="Institution Logo" class="img-fluid" style="max-height: 150px;">
+        </a>
+        <!-- Mobile Menu Toggle -->
+<button
+  class="navbar-toggler mobile-nav-toggle d-lg-none"
+  type="button"
+  (click)="toggleNavbar()"
+  aria-controls="navbarNavDropdown"
+  [attr.aria-expanded]="!isNavbarCollapsed"
+  aria-label="Toggle navigation"
+>
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+        <!-- Menu Content -->
+<div
+  class="collapse navbar-collapse"
+  [class.show]="!isNavbarCollapsed"
+  id="navbarNavDropdown"
+>
+          <ul class="navmenu navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+            <!-- About Us -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="aboutDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" [routerLink]="['/about-us/about']">About Us</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/about-us/vision-mission']">Vision & Mission</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/about-us/president']">President's Message</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/about-us/chairman']">Chairman's Message</a></li>
+                <li><a class="dropdown-item" routerLink="/about-us/general-secretory">Vice Chancellor's Message</a></li>
+                <li><a class="dropdown-item" routerLink="/about-us/approvals">Approvals</a></li>
+                <li><a class="dropdown-item" routerLink="/about-us/ourgroupinstitute">Our Group Institute</a></li>
+                <li><a class="dropdown-item" routerLink="/about-us/governing">Governing Body</a></li>
+                <li><a class="dropdown-item" routerLink="/about-us/boardmaharashtra">Board of Management</a></li>
+                <li><a class="dropdown-item" routerLink="/about-us/universityofficers">University Officers</a></li>
+                <li><a class="dropdown-item" routerLink="/about-us/committees">Committees</a></li>
+                <li><a class="dropdown-item" routerLink="/about-us/mous">MOU's</a></li>
+                <li><a class="dropdown-item" routerLink="/about-us/membership">Membership</a></li>
+              </ul>
+            </li>
+
+            <!-- Institute -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="instituteDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Institute</a>
+              <ul class="dropdown-menu" aria-labelledby="instituteDropdown">
+                <li><a class="dropdown-item" href="mba.html">MBA</a></li>
+                <li><a class="dropdown-item" href="engineering.html">Engineering</a></li>
+                <li><a class="dropdown-item" href="pharmacy.html">Pharmacy</a></li>
+                <li><a class="dropdown-item" href="polytechnic.html">Polytechnic</a></li>
+                <li><a class="dropdown-item" href="iti.html">ITI</a></li>
+                <li><a class="dropdown-item" href="public_school.html">Public School</a></li>
+                <li><a class="dropdown-item" href="bed.html">B.Ed</a></li>
+              </ul>
+            </li>
+
+            <!-- Academics -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Academics</a>
+              <ul class="dropdown-menu" aria-labelledby="academicsDropdown">
+                <li><a class="dropdown-item" routerLink="/academics/academics-overview">Academics Overview</a></li>
+                <li><a class="dropdown-item" routerLink="/academics/academic-calender">Academic Calendar</a></li>
+                <li><a class="dropdown-item" routerLink="/academics/list-of-holidays">List of Holidays</a></li>
+                <li><a class="dropdown-item" routerLink="/academics/academics-regulation">Academic Regulations</a></li>
+              </ul>
+            </li>
+
+            <!-- Admissions -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="admissionsDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Admissions</a>
+              <ul class="dropdown-menu" aria-labelledby="admissionsDropdown">
+                <li><a class="dropdown-item" routerLink="/admission/apply-online">Apply Online</a></li>
+                <li><a class="dropdown-item" routerLink="/admission/courses-offered">Courses Offered</a></li>
+                <li><a class="dropdown-item" routerLink="/admission/rules-regulations">Rules & Regulations</a></li>
+                <li><a class="dropdown-item" routerLink="/admission/scholarship-details">Scholarship Details</a></li>
+                <li><a class="dropdown-item" routerLink="/admission/eligibility-criteria">Eligibility Criteria</a></li>
+                <li><a class="dropdown-item" routerLink="/admission/document-required">Document Required</a></li>
+                <li><a class="dropdown-item" routerLink="/admission/fee-structure">Fee Structure</a></li>
+                <li><a class="dropdown-item" routerLink="/admission/faqs">FAQ's</a></li>
+                <li><a class="dropdown-item" routerLink="/admission/e-brochure">E-Brochure</a></li>
+                <!-- <li><a class="dropdown-item" href="refundpolicy.html">Refund Policy</a></li>
+                <li><a class="dropdown-item" href="photogallery.html">Photo Gallery</a></li> -->
+              </ul>
+            </li>
+
+            <!-- Placement -->
+            <li class="nav-item"><a class="nav-link" routerLink="/placements">Placements</a></li>
+
+            <!-- Research -->
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="researchDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Research</a>
+              <ul class="dropdown-menu" aria-labelledby="researchDropdown">
+                <li><a class="dropdown-item" href="research.html">Research</a></li>
+                <li><a class="dropdown-item" href="exam_notices.html">Notices</a></li>
+                <li><a class="dropdown-item" href="exam_results.html">Results</a></li>
+                <li><a class="dropdown-item" href="exam_timetables.html">Timetables</a></li>
+                <li><a class="dropdown-item" href="exam_apply.html">How to Apply?</a></li>
+                <li><a class="dropdown-item" href="exam_coe.html">CoE</a></li>
+                <li><a class="dropdown-item" href="exam_coordinators.html">Co-ordinators</a></li>
+              </ul>
+            </li> -->
+
+
+
+            <!-- IQAC -->
+            <li class="nav-item"><a class="nav-link" routerLink="/iqac">IQAC</a></li>
+
+            <!-- Campus Life -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="campusLifeDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Campus Life</a>
+              <ul class="dropdown-menu" aria-labelledby="campusLifeDropdown">
+                <li><a class="dropdown-item" routerLink="/campus-life/gallery">Gallery</a></li>
+                <li><a class="dropdown-item" routerLink="/campus-life/eventgallery">Events Gallery</a></li>
+                <li><a class="dropdown-item" routerLink="/campus-life/achievement">Achievement</a></li>
+                <li><a class="dropdown-item" routerLink="/campus-life/sports">Sports</a></li>
+                <li><a class="dropdown-item" routerLink="/campus-life/media-coverage">Media Coverage</a></li>
+              </ul>
+            </li>
+
+            <!-- Blogs -->
+            <li class="nav-item"><a class="nav-link" routerLink="/blogs">Blogs</a></li>
+
+            <!-- Contact -->
+            <li class="nav-item"><a [routerLink]="['/contact-us']" class="nav-link" >Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>

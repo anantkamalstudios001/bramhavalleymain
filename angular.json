@@ -31,9 +31,18 @@
             ],
             "styles": [
               "src/styles.scss",
-               "src/style.css"
-            ],
-            "scripts": []
+               "src/style.css",
+                 "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+                 "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                 "node_modules/aos/dist/aos.css",
+                 "node_modules/swiper/swiper-bundle.min.css"
+
+
+              ],
+            "scripts": [
+                "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+                "node_modules/aos/dist/aos.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -41,12 +50,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "20kb"
                 }
               ],
               "outputHashing": "all"
@@ -95,9 +104,16 @@
             ],
             "styles": [
               "src/styles.scss",
-               "src/style.css"
+               "src/style.css",
+               "node_modules/swiper/swiper-bundle.min.css",
+               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+               "node_modules/swiper/swiper-bundle.min.css"
+
             ],
-            "scripts": []
+            "scripts": [
+                "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           }
         }
       }

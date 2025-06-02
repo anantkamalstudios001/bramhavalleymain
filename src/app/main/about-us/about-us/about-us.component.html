@@ -1,0 +1,143 @@
+<ng-container #container></ng-container>
+
+
+
+
+
+
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section" data-aos="fade-up">
+            <div class="container position-relative py-5">
+                <h1 class="display-3 fw-bold text-white">About Brahma Valley University</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">Discover our legacy of excellence in
+                    education and innovation.</p>
+            </div>
+        </section>
+
+        <div class="container py-2">
+            <!-- Who We Are Section -->
+            <section class="row align-items-center mb-5">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                    <img [src]="backendUrl + who_we_Are_about_Data[0]?.image"
+                        alt="Campus view" class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+                    <h2><strong>Who We Are</strong></h2>
+                    <p>{{who_we_Are_about_Data[0]?.description}}</p>
+                </div>
+            </section>
+
+            <!-- Vision & Mission Section -->
+            <section class="mb-5" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="mb-4 text-center"><strong>Vision & Mission</strong></h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Vision</h4>
+                        <p>To be a global leader in education, fostering innovation, research, and holistic development
+                            to create responsible global citizens.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Mission</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Provide quality education with
+                                a focus on practical learning.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Promote research and
+                                innovation to address global challenges.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Nurture ethical leaders with a
+                                commitment to societal progress.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section class="mb-5">
+                <h2 class="mb-4 text-center" data-aos="fade-up" data-aos-duration="1000"><strong>Campus Gallery</strong>
+                </h2>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4" data-aos="flip-left" data-aos-duration="800" *ngFor="let get_campus_gallry_Data of get_campus_gallry_Data">
+                        <a href="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80"
+                            class="glightbox" data-glightbox="title: Main Campus">
+                            <img [src]="backendUrl + get_campus_gallry_Data?.image"
+                                alt="Main Campus" class="img-fluid rounded gallery-img" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Placements Section -->
+            <section class="mb-5" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="mb-4 text-center"><strong>Placements</strong></h2>
+                <p class="text-muted mb-4">Brahma Valley University’s Placement Cell ensures our students are
+                    well-prepared for successful careers. In 2024, 92% of our graduates secured placements in top-tier
+                    companies, with an average salary package of ₹5.5 LPA.</p>
+                <div class="card shadow-sm p-4">
+                    <h4>Placement Highlights</h4>
+                    <ul class="list-unstyled">
+                        <li *ngFor="let placements_paragraph_Data of placements_paragraph_Data"><i class="bi bi-check-circle-fill text-success me-2"></i>{{placements_paragraph_Data.paragraph}}</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Top Recruiters Section -->
+            <section class="mb-5" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="mb-4 text-center"><strong>Top Recruiters</strong></h2>
+                <p class="text-muted mb-4 text-center">Our graduates are recruited by leading organizations across
+                    various sectors.</p>
+                <div class="row g-3">
+                    <div class="col-6 col-md-3 text-center">
+                        <img src="assets/img/company/accenture.jpg" alt="Accenture Logo" class="img-fluid mb-2">
+                        <p>Accenture</p>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <img src="assets/img/company/infosys.jpg" alt="Infosys Logo" class="img-fluid mb-2">
+                        <p>Infosys</p>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <img src="assets/img/company/cap.jpg" alt="Capgemini Logo" class="img-fluid mb-2">
+                        <p>Capgemini</p>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <img src="assets/img/company/ibm.jpg" alt="IBM Logo" class="img-fluid mb-2">
+                        <p>IBM</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Highlight Case Section -->
+            <section class="mb-5" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="mb-4 text-center"><strong>Highlight Case</strong></h2>
+                <div class="card shadow-sm p-4">
+                    <h4>{{get__highlighted_cases_Data[0]?.heading}}</h4>
+                    <p class="text-muted">{{get__highlighted_cases_Data[0]?.paragraph}}</p>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="text-center mb-5" data-aos="zoom-in" data-aos-duration="1000">
+                <h2 class="mb-4"><strong>Join Our Community</strong></h2>
+                <p class="text-muted mb-4">Explore the opportunities at Brahma Valley University and become part of our
+                    vibrant academic community.</p>
+                <a href="contact_us.html" class="btn btn-primary btn-lg">Get in Touch</a>
+            </section>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ng-container #footercontainer></ng-container>

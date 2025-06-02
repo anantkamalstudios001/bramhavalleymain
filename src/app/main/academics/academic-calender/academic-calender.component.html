@@ -1,0 +1,181 @@
+<ng-container #container></ng-container>
+
+
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section" data-aos="fade-up">
+            <div class="container position-relative py-5">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb bg-transparent text-white p-0">
+                        <li class="breadcrumb-item"><a href="index.html"
+                                class="text-white text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Academic Calendar</li>
+                    </ol>
+                </nav>
+                <h1 class="display-3 fw-bold text-white" data-aos="zoom-in" data-aos-delay="100">Academic Calendar
+                    2025–2026</h1>
+                <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="200">Access key academic schedules
+                    for all Brahma Valley institutions, from Management to Public School.</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="#calendar-section" class="btn btn-light btn-lg shadow-sm px-5 py-2" data-aos="fade-up"
+                        data-aos-delay="400">Explore Calendars</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Calendar Section -->
+        <section class="p-5" style="background-color: #f2f2f2;" id="calendar-section">
+            <div class="container">
+                <h2 class="h2 text-center fw-bold mb-3" style="font-family: 'Poppins';" data-aos="fade-up">Academic
+                    Calendars</h2>
+                <hr class="border-3 border-primary mx-auto mb-4" style="width: 100px; border-color: #083da0;"
+                    data-aos="fade-up" data-aos-delay="100">
+                <p class="text-center mb-4" style="font-family: 'Poppins';" data-aos="fade-up" data-aos-delay="200">
+                    Download academic calendars for MBA, Engineering, Polytechnic, ITI, Pharmacy, B.Ed, D.Ed, and Public
+                    School.</p>
+
+                <!-- College Filter -->
+                <div class="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <select class="form-select w-auto" id="collegeFilter" aria-label="Filter by college">
+                        <option value="all">All Institutions</option>
+                        <option value="management">College of Management (MBA)</option>
+                        <option value="engineering">College of Engineering</option>
+                        <option value="polytechnic">Polytechnic</option>
+                        <option value="iti">Industrial Training Institute (ITI)</option>
+                        <option value="pharmacy">College of Pharmacy</option>
+                        <option value="bed">College of Education (B.Ed)</option>
+                        <option value="ded">College of Education (D.Ed)</option>
+                        <option value="public-school">Public School</option>
+                    </select>
+                </div>
+
+                <!-- Calendar Cards -->
+                <div class="row g-4" id="calendarCards">
+                    <div class="col-12 col-md-6 col-lg-3 calendar-card" data-college="management" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div class="card h-100 shadow-sm border-0 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-briefcase-fill text-primary display-4 mb-3"></i>
+                                <h5 class="card-title fw-bold" style="font-family: 'Poppins'; color: #083da0;">College
+                                    of Management (MBA)</h5>
+                                <p class="card-text" style="font-family: 'Poppins';">Calendar for MBA programs,
+                                    detailing semesters, exams, and events.</p>
+                                <a href="assets/pdf/academic-calendar-2025-26-management.pdf"
+                                    class="btn btn-primary mt-3" download>Download PDF <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 calendar-card" data-college="engineering" data-aos="fade-up"
+                        data-aos-delay="350">
+                        <div class="card h-100 shadow-sm border-0 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-gear-fill text-primary display-4 mb-3"></i>
+                                <h5 class="card-title fw-bold" style="font-family: 'Poppins'; color: #083da0;">College
+                                    of Engineering</h5>
+                                <p class="card-text" style="font-family: 'Poppins';">Schedule for B.Tech and M.Tech
+                                    programs, including key academic dates.</p>
+                                <a href="assets/pdf/academic-calendar-2025-26-engineering.pdf"
+                                    class="btn btn-primary mt-3" download>Download PDF <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 calendar-card" data-college="polytechnic" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <div class="card h-100 shadow-sm border-0 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-tools text-primary display-4 mb-3"></i>
+                                <h5 class="card-title fw-bold" style="font-family: 'Poppins'; color: #083da0;">
+                                    Polytechnic</h5>
+                                <p class="card-text" style="font-family: 'Poppins';">Academic calendar for diploma
+                                    programs with exam and practical schedules.</p>
+                                <a href="assets/pdf/academic-calendar-2025-26-polytechnic.pdf"
+                                    class="btn btn-primary mt-3" download>Download PDF <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 calendar-card" data-college="iti" data-aos="fade-up"
+                        data-aos-delay="450">
+                        <div class="card h-100 shadow-sm border-0 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-wrench text-primary display-4 mb-3"></i>
+                                <h5 class="card-title fw-bold" style="font-family: 'Poppins'; color: #083da0;">
+                                    Industrial Training Institute (ITI)</h5>
+                                <p class="card-text" style="font-family: 'Poppins';">ITI calendar with training and
+                                    certification schedules.</p>
+                                <a href="assets/pdf/academic-calendar-2025-26-iti.pdf" class="btn btn-primary mt-3"
+                                    download>Download PDF <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 calendar-card" data-college="pharmacy" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <div class="card h-100 shadow-sm border-0 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-capsule text-primary display-4 mb-3"></i>
+                                <h5 class="card-title fw-bold" style="font-family: 'Poppins'; color: #083da0;">College
+                                    of Pharmacy</h5>
+                                <p class="card-text" style="font-family: 'Poppins';">Calendar for B.Pharm and D.Pharm,
+                                    covering coursework and exams.</p>
+                                <a href="assets/pdf/academic-calendar-2025-26-pharmacy.pdf" class="btn btn-primary mt-3"
+                                    download>Download PDF <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 calendar-card" data-college="bed" data-aos="fade-up"
+                        data-aos-delay="550">
+                        <div class="card h-100 shadow-sm border-0 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-book-fill text-primary display-4 mb-3"></i>
+                                <h5 class="card-title fw-bold" style="font-family: 'Poppins'; color: #083da0;">College
+                                    of Education (B.Ed)</h5>
+                                <p class="card-text" style="font-family: 'Poppins';">B.Ed calendar with teaching
+                                    practice and exam schedules.</p>
+                                <a href="assets/pdf/academic-calendar-2025-26-bed.pdf" class="btn btn-primary mt-3"
+                                    download>Download PDF <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 calendar-card" data-college="ded" data-aos="fade-up"
+                        data-aos-delay="600">
+                        <div class="card h-100 shadow-sm border-0 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-book-fill text-primary display-4 mb-3"></i>
+                                <h5 class="card-title fw-bold" style="font-family: 'Poppins'; color: #083da0;">College
+                                    of Education (D.Ed)</h5>
+                                <p class="card-text" style="font-family: 'Poppins';">D.Ed calendar with coursework and
+                                    internship dates.</p>
+                                <a href="assets/pdf/academic-calendar-2025-26-ded.pdf" class="btn btn-primary mt-3"
+                                    download>Download PDF <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 calendar-card" data-college="public-school" data-aos="fade-up"
+                        data-aos-delay="650">
+                        <div class="card h-100 shadow-sm border-0 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-backpack2-fill text-primary display-4 mb-3"></i>
+                                <h5 class="card-title fw-bold" style="font-family: 'Poppins'; color: #083da0;">Public
+                                    School</h5>
+                                <p class="card-text" style="font-family: 'Poppins';">School calendar with academic and
+                                    extracurricular schedules.</p>
+                                <a href="assets/pdf/academic-calendar-2025-26-public-school.pdf"
+                                    class="btn btn-primary mt-3" download>Download PDF <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <ng-container #footercontainer></ng-container>
